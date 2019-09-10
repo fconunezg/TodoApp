@@ -1,13 +1,12 @@
 <h1> <%= link_to "Crear nuevo ToDo", todos_new_path %> </h1>
 
-<%= @todos.each do |todo| %>
+<% @todos.each do |t| %>
   <div class="well">
-  <h1> <%= todo.description %> </h1>
-  <p> <%= todo.completed %> </p>
-  <p> <%= link_to "Ver detalle del ToDo", show_path(todo.id) %> </p>
-  <p> <%= link_to "Editar detalle del ToDo", edit_path(todo.id) %> </p>
-  <p> <%= link_to "Eliminar el ToDo", todo, method: :delete %> </p>
-  <p> <%= link_to "Marcar este ToDo como completado", complete_path(todo.id) %> </p>
-
+  <h1> <%= t.description %> </h1>
+  <p> <%= t.completed %> </p>
+  <p> <%= link_to "Ver detalle del ToDo", show_path(t.id) %> </p>
+  <p> <%= link_to "Editar detalle del ToDo", edit_path(t.id) %> </p>
+  <p> <%= link_to "Eliminar el ToDo", t, method: :delete %> </p>
+  <p> <%= link_to "Marcar este ToDo como completado", complete_path(t.id) %> </p>
   </div>
 <% end %>
