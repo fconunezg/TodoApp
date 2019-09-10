@@ -1,5 +1,5 @@
 <div class="col-sm-6">
-  <%= @todos.each do |todo| %>
+  <% @todos.each do |todo| %>
       <% if todo.completed == false %>
     <div class="well">
       <h1> <%= todo.description %> </h1>
